@@ -1,0 +1,58 @@
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:dash:schema:mpd:2011" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd" type="static" mediaPresentationDuration="PT479S" minBufferTime="PT1.5S" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011">
+<Period duration="PT479S" start="PT0S">
+<AdaptationSet>
+<ContentComponent contentType="video"/>
+<Representation id="80_12" bandwidth="772580" codecs="hev1.1.6.L150.90" mimeType="video/mp4" height="1920" width="1080" frameRate="25.012" sar="N/A" startWithSAP="1>
+<BaseURL>https://upos-sz-mirror08c.bilivideo.com/upgcxcode/67/15/1528661567/1528661567-1-100113.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&amp;uipk=5&nbs=1&deadline=1714747696&gen=playurlv2&os=08cbv&oi=0&trid=b48810721eab4e629cc58ff62afbcbf1u&mid=0&platform=pc&upsig=5a3e12cbdee23c1625313b5f59059a9a&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,mid,platform&bvc=vod&nettype=0&orderid=0,3&buvid=&build=0&f=u_0_0&agrr=0&bw=96627&logo=80000000</BaseURL>
+<SegmentBase indexRange="1063-2246">
+<Initialization range="0-1062"/>
+</SegmentBase>
+</Representation>
+</AdaptationSet>
+<AdaptationSet>
+<ContentComponent contentType="video"/>
+<Representation id="80_7" bandwidth="1927457" codecs="avc1.640033" mimeType="video/mp4" height="1920" width="1080" frameRate="25" sar="N/A" startWithSAP="1>
+<BaseURL>https://upos-sz-mirrorali.bilivideo.com/upgcxcode/67/15/1528661567/1528661567-1-30080.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&amp;uipk=5&nbs=1&deadline=1714747696&gen=playurlv2&os=alibv&oi=0&trid=b48810721eab4e629cc58ff62afbcbf1u&mid=0&platform=pc&upsig=223950f49c63dcd14b3ee910a8e2916a&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,mid,platform&bvc=vod&nettype=0&orderid=0,3&buvid=&build=0&f=u_0_0&agrr=0&bw=241057&logo=80000000</BaseURL>
+<SegmentBase indexRange="899-2082">
+<Initialization range="0-898"/>
+</SegmentBase>
+</Representation>
+</AdaptationSet>
+<AdaptationSet>
+<ContentComponent contentType="video"/>
+<Representation id="80_13" bandwidth="837646" codecs="av01.0.00M.10.0.110.01.01.01.0" mimeType="video/mp4" height="1920" width="1080" frameRate="25.012" sar="N/A" startWithSAP="1>
+<BaseURL>https://upos-sz-mirror08c.bilivideo.com/upgcxcode/67/15/1528661567/1528661567-1-100026.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&amp;uipk=5&nbs=1&deadline=1714747696&gen=playurlv2&os=08cbv&oi=0&trid=b48810721eab4e629cc58ff62afbcbf1u&mid=0&platform=pc&upsig=f3094161427f7655e43c9ca0f2597817&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,mid,platform&bvc=vod&nettype=0&orderid=0,3&buvid=&build=0&f=u_0_0&agrr=0&bw=104765&logo=80000000</BaseURL>
+<SegmentBase indexRange="958-2141">
+<Initialization range="0-957"/>
+</SegmentBase>
+</Representation>
+</AdaptationSet>
+<AdaptationSet>
+<ContentComponent contentType="audio"/>
+<Representation id="30280_0" bandwidth="104305" codecs="mp4a.40.2" mimeType="audio/mp4" numChannels="2" sampleRate="192000" startWithSAP="0>
+<BaseURL>https://upos-sz-mirror08c.bilivideo.com/upgcxcode/67/15/1528661567/1528661567-1-30280.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&amp;uipk=5&nbs=1&deadline=1714747696&gen=playurlv2&os=08cbv&oi=0&trid=b48810721eab4e629cc58ff62afbcbf1u&mid=0&platform=pc&upsig=8834f0c52b54d29ca28cd5a16d9ec9db&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,mid,platform&bvc=vod&nettype=0&orderid=0,3&buvid=&build=0&f=u_0_0&agrr=0&bw=13050&logo=80000000</BaseURL>
+<SegmentBase indexRange="818-2001">
+<Initialization range="0-817"/>
+</SegmentBase>
+</Representation>
+</AdaptationSet>
+<AdaptationSet>
+<ContentComponent contentType="audio"/>
+<Representation id="30216_0" bandwidth="45454" codecs="mp4a.40.5" mimeType="audio/mp4" numChannels="2" sampleRate="64000" startWithSAP="0>
+<BaseURL>https://upos-sz-mirrorali.bilivideo.com/upgcxcode/67/15/1528661567/1528661567-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&amp;uipk=5&nbs=1&deadline=1714747696&gen=playurlv2&os=alibv&oi=0&trid=b48810721eab4e629cc58ff62afbcbf1u&mid=0&platform=pc&upsig=f53a32e08165ab876690c46960ce3e30&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,mid,platform&bvc=vod&nettype=0&orderid=0,3&buvid=&build=0&f=u_0_0&agrr=0&bw=5690&logo=80000000</BaseURL>
+<SegmentBase indexRange="827-2010">
+<Initialization range="0-826"/>
+</SegmentBase>
+</Representation>
+</AdaptationSet>
+<AdaptationSet>
+<ContentComponent contentType="audio"/>
+<Representation id="30232_0" bandwidth="104305" codecs="mp4a.40.2" mimeType="audio/mp4" numChannels="2" sampleRate="132000" startWithSAP="0>
+<BaseURL>https://upos-sz-mirrorcos.bilivideo.com/upgcxcode/67/15/1528661567/1528661567-1-30232.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&amp;uipk=5&nbs=1&deadline=1714747696&gen=playurlv2&os=cosbv&oi=0&trid=b48810721eab4e629cc58ff62afbcbf1u&mid=0&platform=pc&upsig=755ee1fc4248ce66a9d6c3123e503c0b&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,mid,platform&bvc=vod&nettype=0&orderid=0,3&buvid=&build=0&f=u_0_0&agrr=0&bw=13050&logo=80000000</BaseURL>
+<SegmentBase indexRange="818-2001">
+<Initialization range="0-817"/>
+</SegmentBase>
+</Representation>
+</AdaptationSet>
+</Period>
+</MPD>
