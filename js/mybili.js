@@ -108,11 +108,11 @@ var rule = {
     searchable:2,
     quickSearch:0,
     headers:{
-        "User-Agent":"PC_UA",
+        "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36",
         "Referer": "https://www.bilibili.com",
         // "Cookie":"$bili_cookie"
         // "Cookie":"https://ghproxy.net/https://github.com/FongMi/CatVodSpider/raw/main/txt/cookie.txt"
-        "Cookie":"https://ghproxy.net/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/txt/cookie.txt"
+        "Cookie":"SESSDATA=863f088c%2C1730172838%2C5802d%2A51CjCaQaj4dKA8lx-pVnDKsLlHVLQoVKpwL4448uNLg5do7L-5UJr433z-xe0CmcgU-Z0SVmRkOUd6TG5JZ2lIMWhGSnN5RElPTXVTTklLakNMY0NqTjczWFdhdHpLWDc5QTg1MEliU2pxM0p6Tnp4NjRKc1BERDE3RHU2RktJSmpFaXdhbkJyUVZRIIEC;"
     },
     timeout:5000,
     limit:8,
@@ -143,7 +143,7 @@ var rule = {
         });
         result.parse = 0;
         result.playUrl = '';
-        result.url = myurls;
+        result.url = myurls[1];
         result.header = {
             'cookie': 'SESSDATA=863f088c%2C1730172838%2C5802d%2A51CjCaQaj4dKA8lx-pVnDKsLlHVLQoVKpwL4448uNLg5do7L-5UJr433z-xe0CmcgU-Z0SVmRkOUd6TG5JZ2lIMWhGSnN5RElPTXVTTklLakNMY0NqTjczWFdhdHpLWDc5QTg1MEliU2pxM0p6Tnp4NjRKc1BERDE3RHU2RktJSmpFaXdhbkJyUVZRIIEC;',
             'Referer': 'https://www.bilibili.com',
@@ -540,8 +540,8 @@ var rule = {
             if(video.id == myqn){
                 var video_id = myqn + '_' + video.codecid;
                 var video_type = video.mimeType.split('/')[0];
-                var baseUrl = video.baseUrl.replace(/&/g, '&amp;');
-                var video_AdaptationSet = '<AdaptationSet>\\n' + '<ContentComponent contentType="' + video_type + '"/>\\n' + '<Representation id="' + video_id + '" bandwidth="' + video.bandwidth + '" codecs="' + video.codecs + '" mimeType="' + video.mimeType + '" height="' + video.height + '" width="' + video.width + '" frameRate="' +video.frameRate + '" sar="' + video.sar + '" startWithSAP="' + video.startWithSap + '">\\n' + '<BaseURL>' + baseUrl + '</BaseURL>\\n' + '<SegmentBase indexRange="' + video.SegmentBase.indexRange + '">\\n' + '<Initialization range="' + video.SegmentBase.Initialization + '"/>\\n' + '</SegmentBase>\\n' + '</Representation>\\n' + '</AdaptationSet>';
+                var baseUrl = video.baseUrl.replace('&', '&amp;');
+                var video_AdaptationSet = '<AdaptationSet>\\n' + '<ContentComponent contentType="' + video_type + '"/>\\n' + '<Representation id="' + video_id + '" bandwidth="' + video.bandwidth + '" codecs="' + video.codecs + '" mimeType="' + video.mimeType + '" height="' + video.height + '" width="' + video.width + '" frameRate="' +video.frameRate + '" sar="' + video.sar + '" startWithSAP="' + video.startWithSap + '>\\n' + '<BaseURL>' + baseUrl + '</BaseURL>\\n' + '<SegmentBase indexRange="' + video.SegmentBase.indexRange + '">\\n' + '<Initialization range="' + video.SegmentBase.Initialization + '"/>\\n' + '</SegmentBase>\\n' + '</Representation>\\n' + '</AdaptationSet>';
                 video_str_list.push(video_AdaptationSet);
             }
         });
@@ -552,14 +552,34 @@ var rule = {
             var audio_id = audio.id;
             var audio_id2 = audio.id + '_' + audio.codecid;
             var audio_type = audio.mimeType.split('/')[0];
-            var audio_baseUrl = audio.baseUrl.replace(/&/g, '&amp;');
-            var audio_AdaptationSet = '<AdaptationSet>\\n' + '<ContentComponent contentType="' + audio_type + '"/>\\n' + '<Representation id="' + audio_id2 + '" bandwidth="' + audio.bandwidth + '" codecs="' + audio.codecs + '" mimeType="' + audio.mimeType + '" numChannels="2" sampleRate="' + audio_sampleRates[audio_id] + '" startWithSAP="' + audio.startWithSap + '">\\n' + '<BaseURL>' + audio_baseUrl + '</BaseURL>\\n' + '<SegmentBase indexRange="' + audio.SegmentBase.indexRange + '">\\n' + '<Initialization range="' + audio.SegmentBase.Initialization + '"/>\\n' + '</SegmentBase>\\n' + '</Representation>\\n' + '</AdaptationSet>';
+            var audio_baseUrl = audio.baseUrl.replace('&', '&amp;');
+            var audio_AdaptationSet = '<AdaptationSet>\\n' + '<ContentComponent contentType="' + audio_type + '"/>\\n' + '<Representation id="' + audio_id2 + '" bandwidth="' + audio.bandwidth + '" codecs="' + audio.codecs + '" mimeType="' + audio.mimeType + '" numChannels="2" sampleRate="' + audio_sampleRates[audio_id] + '" startWithSAP="' + audio.startWithSap + '>\\n' + '<BaseURL>' + audio_baseUrl + '</BaseURL>\\n' + '<SegmentBase indexRange="' + audio.SegmentBase.indexRange + '">\\n' + '<Initialization range="' + audio.SegmentBase.Initialization + '"/>\\n' + '</SegmentBase>\\n' + '</Representation>\\n' + '</AdaptationSet>';
             audio_str_list.push(audio_AdaptationSet);
         });
         var audio_str = audio_str_list.join('\\n');
         var mympd_str = '<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:dash:schema:mpd:2011" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd" type="static" mediaPresentationDuration="PT' + jo.dash.duration + 'S" minBufferTime="PT' + jo.dash.minBufferTime + 'S" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011">\\n' + '<Period duration="PT' + jo.dash.duration + 'S" start="PT0S">\\n' + video_str + '\\n' + audio_str + '\\n' + '</Period>\\n' + '</MPD>';
-
+        //log('yingshi mympd_str:   ' + mympd_str);
+        function str2ab(str) {
+            var buf = new ArrayBuffer(str.length); 
+            var bufView = new Uint8Array(buf);
+            for (var i=0, strLen=str.length; i<strLen; i++) {
+                 bufView[i] = str.charCodeAt(i);
+            }
+            return bufView;
+        }
+        function convertToBinary(code) {
+            let binary = "";
+            for (let i = 0; i < code.length; i++) {
+                const charCode = code.charCodeAt(i);
+                const charBinary = charCode.toString(2).padStart(8, "0");
+                binary += charBinary;
+            }
+            return binary;
+        }
+        //var mystr = convertToBinary(mympd_str);
+        //log('yingshi mystr:   ' + mystr);
         input = [200,'application/dash+xml', mympd_str];
+        // input = mympd_str;
     } else{
         input = [200,'text;plain', 'hello world'];
     }
