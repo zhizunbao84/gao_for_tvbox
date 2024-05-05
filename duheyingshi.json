@@ -29,7 +29,7 @@
             "searchable": 0,
             "quickSearch": 0,
             "filterable": 0,
-            "ext": "./js/douban.js"
+            "ext": "https://ghproxy.net/https://raw.githubusercontent.com/zhizunbao84/gao_for_tvbox/master/js/mybili.js"
         },
         {
             "key": "csp_LocalFile",
